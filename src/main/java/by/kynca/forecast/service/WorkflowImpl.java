@@ -1,7 +1,6 @@
 package by.kynca.forecast.service;
 
 
-import by.kynca.forecast.bean.Weather;
 import com.uber.cadence.workflow.Workflow;
 
 public class WorkflowImpl implements ForecastWorkflow {
@@ -13,14 +12,15 @@ public class WorkflowImpl implements ForecastWorkflow {
     }
 
     @Override
-    public boolean processActivity(String name) {
-        System.out.println("city is " + name);
-        Double temperature = activity.getAirTemperature(name);
+    public boolean processActivity(String city) {
+        System.out.println("city is " + city);
+        Double temperature = activity.getAirTemperature(city);
         if(temperature == null){
-            System.out.println("temperature for " + name + "cant be found");
+            System.out.println("temperature for " + city + "cant be found");
             return false;
         }
-        activity.storeInfo(temperature, name);
+        activity.storeInfo(temperature, city);
+        System.out.println("temperature " + temperature + " for " + city + " is saved");
         return true;
     }
 }

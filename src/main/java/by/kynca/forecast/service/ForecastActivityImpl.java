@@ -2,7 +2,6 @@ package by.kynca.forecast.service;
 
 import by.kynca.forecast.bean.Weather;
 import by.kynca.forecast.repository.WeatherRepo;
-import com.fasterxml.jackson.databind.ObjectMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;

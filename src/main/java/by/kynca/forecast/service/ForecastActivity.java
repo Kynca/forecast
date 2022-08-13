@@ -1,6 +1,5 @@
 package by.kynca.forecast.service;
 
-import by.kynca.forecast.bean.Weather;
 import com.uber.cadence.activity.ActivityMethod;
 
 public interface ForecastActivity {
